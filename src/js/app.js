@@ -23,18 +23,17 @@ const averageHeightOfColumn = columns => {
 
 const insertImageToDom = (height, averageHeight, markup, item) => {
     if (window.innerWidth >= 769) {
-        
-        if (height <= averageHeight - item.height / 2) {
+        if (height <= averageHeight - item.height / 4) {
             domElements.galleryColumnOne.insertAdjacentHTML('beforeend', markup);
-        } else if (height > averageHeight && height <= averageHeight*2) {
+        } else if (height > averageHeight && height <= ((averageHeight*2) - (item.height / 4))) {
             domElements.galleryColumnTwo.insertAdjacentHTML('beforeend', markup);
         } else {
             domElements.galleryColumnThree.insertAdjacentHTML('beforeend', markup);
         }
     } else if (window.innerWidth < 769 && window.innerWidth > 480) {
-        if (height < averageHeight - item.height / 2) {
+        if (height < averageHeight - (item.height / 4)) {
             domElements.galleryColumnOne.insertAdjacentHTML('beforeend', markup);
-        } else if (height >= averageHeight - item.height / 2) {
+        } else if (height >= averageHeight - (item.height / 4)) {
             domElements.galleryColumnTwo.insertAdjacentHTML('beforeend', markup);
         }
     } else {
