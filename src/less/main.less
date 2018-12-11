@@ -1,10 +1,10 @@
 body {
 	margin: 0;
 }
-#images {
+#masonry-grid-images {
 	display: none;
 }
-.gallery {
+.masonry-grid-gallery {
     display: flex;
     margin-top: 25px;
 	&__item {
@@ -26,13 +26,13 @@ body {
 }
 
 @media (min-width: 1020px) {
-	.gallery {
+	.masonry-grid-gallery {
 		width: 1000px;
 		margin: 25px auto 0 auto;
 	}
 }
 @media (min-width: 769px) {
-    .gallery {
+    .masonry-grid-gallery {
         &__column {
             &--one {
                 width: 33.333%;
@@ -47,7 +47,7 @@ body {
     }
 }
 @media (min-width: 481px) and (max-width: 768px) {
-    .gallery {
+    .masonry-grid-gallery {
         &__column {
             &--one {
                 width: 50%;
@@ -62,7 +62,7 @@ body {
     }
 }
 @media (max-width: 480px) {
-    .gallery {
+    .masonry-grid-gallery {
         &__column {
             &--one {
                 width: 100%;
