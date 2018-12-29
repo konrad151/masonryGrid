@@ -1,4 +1,4 @@
-# Divante zad1
+# masonryGrid
 
 Responsive masonryGrid is a library which takes images from '#masonry-grid-images' and render them into '.masonry-grid-gallery' columns.
 
