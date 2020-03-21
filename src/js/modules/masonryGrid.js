@@ -1,17 +1,17 @@
-export const domElements = {
+const domElements = {
     images: document.querySelectorAll("#masonry-grid-images img"),
     galleryColumnOne: document.querySelector('.masonry-grid-gallery__column--one'),
     galleryColumnTwo: document.querySelector('.masonry-grid-gallery__column--two'),
     galleryColumnThree: document.querySelector('.masonry-grid-gallery__column--three')
 }
 
-export const clearColumns = () => {
+const clearColumns = () => {
     domElements.galleryColumnOne.innerHTML = '';
     domElements.galleryColumnTwo.innerHTML = '';
     domElements.galleryColumnThree.innerHTML = '';
 }
 
-export const averageHeightOfColumn = columns => {
+const averageHeightOfColumn = columns => {
     let height = 0;
     let allImages = [...domElements.images];
     allImages.map((image) => {
@@ -21,7 +21,7 @@ export const averageHeightOfColumn = columns => {
     return averageHeight;
 }
 
-export const insertImageToDom = (height, averageHeight, markup, item) => {
+const insertImageToDom = (height, averageHeight, markup, item) => {
     if (window.innerWidth >= 769) {
         if (height <= averageHeight - item.height / 4) {
             domElements.galleryColumnOne.insertAdjacentHTML('beforeend', markup);
@@ -41,7 +41,7 @@ export const insertImageToDom = (height, averageHeight, markup, item) => {
     }
 }
 
-export const renderAllImages = (columns) => {
+const renderAllImages = (columns) => {
     const averageHeight = averageHeightOfColumn(columns);
     let height = 0;
     let allImages = [...domElements.images];
